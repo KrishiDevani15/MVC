@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Register</title>
+</head>
+<body>
+    <h2>Register</h2>
+    {% if error %}
+        <p style="color: red;">{{ error }}</p>
+    {% endif %}
+    <form method="POST">
+        {{ form.csrf_token }}
+        {{ form.username.label }}<br>
+        {{ form.username }}<br>
+        {{ form.email.label }}<br>
+        {{ form.email }}<br>
+        {{ form.password.label }}<br>
+        {{ form.password }}<br>
+        <button type="submit">Register</button>
+    </form>
+</body>
+</html>
